@@ -40,19 +40,19 @@ const playGame=(userChoice)=>{
     //comp choice generate
     const compChoice=genCompChoice();
 
-    if(userChoice==compChoice){
+    if(userChoice===compChoice){
         drawGame();
     }
     else{
         let userWin=true;
-        if(userChoice="rock"){
+        if(userChoice==="rock"){
             userWin=compChoice==="paper"?false:true;
         }
-        else if(userChoice="paper"){
+        else if(userChoice==="paper"){
             userWin=compChoice==="scissor"?false:true;
         }
         else{
-            userWin=compChoice=="rock"?false:true;
+            userWin=compChoice==="rock"?false:true;
         }
 
         showWinner(userWin,userChoice,compChoice);
